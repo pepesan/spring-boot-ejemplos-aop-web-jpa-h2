@@ -1,0 +1,43 @@
+### Obtener todos los productos
+GET http://localhost:8080/api/products
+Accept: application/json
+
+### Crear producto válido
+POST http://localhost:8080/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Impresora",
+  "price": 120.0
+}
+
+### Crear producto inválido (precio < 1, debe dar 400)
+POST http://localhost:8080/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Gratis",
+  "price": 0
+}
+
+### Obtener producto por id
+GET http://localhost:8080/api/products/1
+Accept: application/json
+
+
+
+### Actualizar producto
+PUT http://localhost:8080/api/products/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Teclado Mecánico",
+  "price": 59.99
+}
+
+### Borrar producto
+DELETE http://localhost:8080/api/products/1
+Accept: application/json
